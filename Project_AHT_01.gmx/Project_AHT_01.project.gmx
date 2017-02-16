@@ -42,19 +42,24 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\GirlStep.gml</script>
-    <script>scripts\GirlCreat.gml</script>
-    <script>scripts\GirlBulletCreat.gml</script>
-    <script>scripts\GirlAnimationEnd.gml</script>
-    <script>scripts\GirlBulletStep.gml</script>
-    <script>scripts\GirlBulletOutsideRoom.gml</script>
-    <script>scripts\GuardCreat.gml</script>
-    <script>scripts\GuardStep.gml</script>
-    <script>scripts\GuardAnimationEnd.gml</script>
-    <script>scripts\GuardDamage.gml</script>
-    <script>scripts\GuardHitboxCreat.gml</script>
-    <script>scripts\GuardHitboxStep.gml</script>
-    <script>scripts\GuardHitboxDamage.gml</script>
+    <scripts name="Girl">
+      <script>scripts\GirlCreat.gml</script>
+      <script>scripts\GirlStep.gml</script>
+      <script>scripts\GirlAnimationEnd.gml</script>
+      <script>scripts\GirlBulletCreat.gml</script>
+      <script>scripts\GirlBulletStep.gml</script>
+      <script>scripts\GirlBulletOutsideRoom.gml</script>
+    </scripts>
+    <scripts name="Guard">
+      <script>scripts\GuardCreat.gml</script>
+      <script>scripts\GuardStep.gml</script>
+      <script>scripts\GuardAnimationEnd.gml</script>
+      <script>scripts\GuardDamage.gml</script>
+      <script>scripts\GuardHitboxCreat.gml</script>
+      <script>scripts\GuardHitboxStep.gml</script>
+      <script>scripts\GuardHitboxDamage.gml</script>
+    </scripts>
+    <script>scripts\CharacterCreat.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_girl</object>
@@ -75,7 +80,9 @@
     <object>objects\obj_scene_base</object>
     <object>objects\obj_scene_static</object>
     <object>objects\obj_scene_dynamic</object>
+    <object>objects\obj_character</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
   </rooms>
