@@ -24,6 +24,28 @@
       <sprite>sprites\spr_guard_attack_L_UP</sprite>
       <sprite>sprites\spr_guard_attack_R_D</sprite>
       <sprite>sprites\spr_guard_hitbox</sprite>
+      <sprite>sprites\spr_guard_attack_invisible</sprite>
+    </sprites>
+    <sprites name="Wizard">
+      <sprites name="Character">
+        <sprite>sprites\spr_wizard_walk_left</sprite>
+        <sprite>sprites\spr_wizard_walk_right</sprite>
+        <sprite>sprites\spr_wizard_stand_left</sprite>
+        <sprite>sprites\spr_wizard_stand_right</sprite>
+        <sprite>sprites\spr_wizard_attack_left</sprite>
+        <sprite>sprites\spr_wizard_attack_right</sprite>
+        <sprite>sprites\spr_wizard_injured_left</sprite>
+        <sprite>sprites\spr_wizard_injured_right</sprite>
+        <sprite>sprites\spr_wizard_dead_left</sprite>
+        <sprite>sprites\spr_wizard_dead_right</sprite>
+        <sprite>sprites\spr_wizard_hitbox</sprite>
+      </sprites>
+      <sprites name="Skill">
+        <sprite>sprites\spr_wizard_skill</sprite>
+        <sprite>sprites\spr_wizard_flash</sprite>
+        <sprite>sprites\spr_wizard_flash2</sprite>
+        <sprite>sprites\spr_skill_range</sprite>
+      </sprites>
     </sprites>
     <sprites name="Static">
       <sprite>sprites\spr_statue</sprite>
@@ -36,12 +58,16 @@
       <sprite>sprites\spr_light</sprite>
       <sprite>sprites\spr_pool</sprite>
     </sprites>
+    <sprites name="View">
+      <sprite>sprites\spr_view_quake</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\CharacterCreat.gml</script>
     <scripts name="Girl">
       <script>scripts\GirlCreat.gml</script>
       <script>scripts\GirlStep.gml</script>
@@ -59,12 +85,34 @@
       <script>scripts\GuardHitboxStep.gml</script>
       <script>scripts\GuardHitboxDamage.gml</script>
     </scripts>
-    <script>scripts\CharacterCreat.gml</script>
+    <scripts name="Wizard">
+      <script>scripts\WizardCreate.gml</script>
+      <script>scripts\WizardStep.gml</script>
+      <script>scripts\Wizard_Skill_Attack.gml</script>
+      <script>scripts\Wizard_Skill_Flash.gml</script>
+      <script>scripts\WizardAnimationEnd.gml</script>
+      <script>scripts\SkillRangeCreate.gml</script>
+      <script>scripts\SkillRangeStep.gml</script>
+      <script>scripts\WizardDamage.gml</script>
+      <script>scripts\WizardHitboxCreate.gml</script>
+      <script>scripts\WizardHitboxStep.gml</script>
+      <script>scripts\WizardHitboxDamage.gml</script>
+    </scripts>
+    <scripts name="View">
+      <script>scripts\view_quake.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_scene_base</object>
+    <object>objects\obj_scene_static</object>
+    <object>objects\obj_scene_dynamic</object>
+    <object>objects\obj_character</object>
+    <object>objects\obj_skill_static</object>
     <object>objects\obj_girl</object>
     <object>objects\obj_guard</object>
     <object>objects\obj_guard_hitbox</object>
+    <object>objects\obj_wizard</object>
+    <object>objects\obj_wizard_hitbox</object>
     <object>objects\obj_girl_attack_bullet</object>
     <objects name="Static">
       <object>objects\obj_barrel</object>
@@ -77,12 +125,23 @@
       <object>objects\obj_light</object>
       <object>objects\obj_pool</object>
     </objects>
-    <object>objects\obj_scene_base</object>
-    <object>objects\obj_scene_static</object>
-    <object>objects\obj_scene_dynamic</object>
-    <object>objects\obj_character</object>
+    <objects name="Guard">
+      <object>objects\obj_guard_attack_invisible</object>
+    </objects>
+    <objects name="Wizard">
+      <object>objects\obj_effect_wizard_skill</object>
+      <object>objects\obj_effect_wizard_skill2</object>
+      <object>objects\obj_effect_wizard_skill3</object>
+      <object>objects\obj_effect_wizard_flash</object>
+      <object>objects\obj_effect_wizard_flash2</object>
+      <object>objects\obj_skill_range</object>
+      <object>objects\obj_skill_range2</object>
+      <object>objects\obj_skill_range3</object>
+    </objects>
+    <objects name="View">
+      <object>objects\obj_view_quake</object>
+    </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
   </rooms>

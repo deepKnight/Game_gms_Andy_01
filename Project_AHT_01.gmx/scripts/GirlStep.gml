@@ -1,5 +1,4 @@
-var walkspeed = 4;//行走速度控制
-image_speed = 0.25;//sprite动画速度控制
+
 
 if(m_isAttacking == false)
 {
@@ -92,4 +91,13 @@ if(sprite_index == spr_girl_attack_side
     }
 }
 
+//防止女孩走出房间
+if(phy_position_x < 0)
+    phy_position_x = 0;
+if(phy_position_y < 0)
+    phy_position_y = 0;
+if(phy_position_x > room_width)
+    phy_position_x = room_width;
+if(phy_position_y > room_height)
+    phy_position_y = room_height;
 
