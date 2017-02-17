@@ -112,14 +112,14 @@
     <object>objects\obj_scene_static</object>
     <object>objects\obj_scene_dynamic</object>
     <object>objects\obj_character</object>
-    <object>objects\obj_skill_static</object>
     <object>objects\obj_girl</object>
     <object>objects\obj_girl_hitbox</object>
+    <object>objects\obj_girl_attack_bullet</object>
     <object>objects\obj_guard</object>
     <object>objects\obj_guard_hitbox</object>
+    <object>objects\obj_guard_attack_invisible</object>
     <object>objects\obj_wizard</object>
     <object>objects\obj_wizard_hitbox</object>
-    <object>objects\obj_girl_attack_bullet</object>
     <objects name="Static">
       <object>objects\obj_barrel</object>
       <object>objects\obj_statue</object>
@@ -131,10 +131,8 @@
       <object>objects\obj_light</object>
       <object>objects\obj_pool</object>
     </objects>
-    <objects name="Guard">
-      <object>objects\obj_guard_attack_invisible</object>
-    </objects>
     <objects name="Wizard">
+      <object>objects\obj_skill_static</object>
       <object>objects\obj_effect_wizard_skill</object>
       <object>objects\obj_effect_wizard_skill2</object>
       <object>objects\obj_effect_wizard_skill3</object>
