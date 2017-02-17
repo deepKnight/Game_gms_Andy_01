@@ -1,4 +1,11 @@
-
+if(m_isDead)
+    return 0;
+    
+if(m_hp == 0){
+    m_isDead = true;
+    sprite_index = spr_guard_die;//这里改成小女孩死亡动画
+    return 0;
+}
 
 if(m_isAttacking == false)
 {

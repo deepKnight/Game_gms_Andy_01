@@ -13,6 +13,7 @@
       <sprite>sprites\spr_girl_stand</sprite>
       <sprite>sprites\spr_girl_attack_side</sprite>
       <sprite>sprites\spr_girl_attack_front</sprite>
+      <sprite>sprites\spr_girl_hitbox</sprite>
       <sprite>sprites\spr_girl_attack_back</sprite>
       <sprite>sprites\spr_girl_attack_bullet</sprite>
     </sprites>
@@ -72,9 +73,13 @@
       <script>scripts\GirlCreat.gml</script>
       <script>scripts\GirlStep.gml</script>
       <script>scripts\GirlAnimationEnd.gml</script>
+      <script>scripts\GirlDamage.gml</script>
       <script>scripts\GirlBulletCreat.gml</script>
       <script>scripts\GirlBulletStep.gml</script>
       <script>scripts\GirlBulletOutsideRoom.gml</script>
+      <script>scripts\GirlHitboxCreat.gml</script>
+      <script>scripts\GirlHitboxStep.gml</script>
+      <script>scripts\GirlHitboxDamage.gml</script>
     </scripts>
     <scripts name="Guard">
       <script>scripts\GuardCreat.gml</script>
@@ -109,6 +114,7 @@
     <object>objects\obj_character</object>
     <object>objects\obj_skill_static</object>
     <object>objects\obj_girl</object>
+    <object>objects\obj_girl_hitbox</object>
     <object>objects\obj_guard</object>
     <object>objects\obj_guard_hitbox</object>
     <object>objects\obj_wizard</object>

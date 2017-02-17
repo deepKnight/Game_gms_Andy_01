@@ -1,44 +1,65 @@
+var player = instance_find(obj_girl, 0);
+distance = sqrt(power(player.phy_position_x - phy_position_x, 2) + power(player.phy_position_y - phy_position_y, 2));
+
 if(m_isDead)
     return 0;
     
 if(m_hp == 0){
     m_isDead = true;
-    sprite_index = spr_guard_die;
+    if(player.phy_position_x >= phy_position_x){
+        sprite_index = spr_guard_die;
+        image_xscale = -1;
+    }
+    else{
+        sprite_index = spr_guard_die;
+    }
     return 0;
 }
 
 if(m_isAttacking == false)
 {
-    var player = instance_find(obj_girl, 0);
     var deltaX = player.x - x;
     var deltaY = player.y - y;
     var mySpeed = walkspeed;
-    if(deltaX > mySpeed){
-        phy_position_x += mySpeed;
-        sprite_index = spr_guard_walk_L_UP;
-    }
-    else if(deltaX < -mySpeed){
-        phy_position_x -= mySpeed;
-        sprite_index = spr_guard_walk_R_D;
-    }
-    else{
-        phy_position_x += deltaX;
-    }
-    
-    if(deltaY > mySpeed){
-        phy_position_y += mySpeed;
-    }
-    else if(deltaY < -mySpeed){
-        phy_position_y -= mySpeed;
+    if(distance < 150){
+        m_isAttacking = true;
+        if(deltaX > 0){
+            sprite_index = spr_guard_attack_R_D;
+        }
+        else{
+            sprite_index = spr_guard_attack_L_UP;
+        }
+        image_index = 0;
+        m_fired = false;
     }
     else{
-        phy_position_y += deltaY;
-    }
-    if(deltaX > 0){
-        sprite_index = spr_guard_walk_R_D;
-    }
-    else if(deltaX < 0){
-        sprite_index = spr_guard_walk_L_UP;
+        if(deltaX > mySpeed){
+            phy_position_x += mySpeed;
+            sprite_index = spr_guard_walk_L_UP;
+        }
+        else if(deltaX < -mySpeed){
+            phy_position_x -= mySpeed;
+            sprite_index = spr_guard_walk_R_D;
+        }
+        else{
+            phy_position_x += deltaX;
+        }
+        
+        if(deltaY > mySpeed){
+            phy_position_y += mySpeed;
+        }
+        else if(deltaY < -mySpeed){
+            phy_position_y -= mySpeed;
+        }
+        else{
+            phy_position_y += deltaY;
+        }
+        if(deltaX > 0){
+            sprite_index = spr_guard_walk_R_D;
+        }
+        else if(deltaX < 0){
+            sprite_index = spr_guard_walk_L_UP;
+        }
     }
 
 }
@@ -46,35 +67,13 @@ if(m_isAttacking == false)
 
 if(sprite_index == spr_guard_attack_L_UP
 || sprite_index == spr_guard_attack_R_D){
-    if(image_index > 2 && m_fired == false){
-        var Bullet = instance_create(x, y, obj_girl_attack_bullet);
+    if(image_index > 6 && m_fired == false){
+        var ball = instance_create(x, y, obj_guard_attack_invisible);
+        show_debug_message("dale")
         var deltaX = 0;
         var deltaY = 0;
-        switch(m_playerDirection){
-        case PlayerDirection.UP:
-          Bullet.m_speedY = -15;
-          Bullet.image_angle = 270;
-          deltaY = -95;
-          break;
-        case PlayerDirection.DOWN:
-          Bullet.m_speedY = 15;
-          Bullet.image_angle = 90;
-          deltaY = 15;
-          break;
-        case PlayerDirection.LEFT:
-          Bullet.m_speedX = -15;
-          deltaX = -50;
-          deltaY = -35;
-          break;
-        case PlayerDirection.RIGHT:
-          Bullet.m_speedX = 15;
-          Bullet.image_angle = 180;
-          deltaX = 50;
-          deltaY = -35;
-          break;
-        } 
-        Bullet.x += deltaX;
-        Bullet.y += deltaY;
+        ball.x += deltaX;
+        ball.y += deltaY;
         m_fired = true;
     }
 }

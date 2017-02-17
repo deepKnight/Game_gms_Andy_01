@@ -9,9 +9,9 @@ if(m_isDead)
 if(m_hp == 0){
     m_isDead = true;
     if(player.phy_position_x >= phy_position_x)
-        sprite_index = spr_wizard_dead_left;
-    else
         sprite_index = spr_wizard_dead_right;
+    else
+        sprite_index = spr_wizard_dead_left;
     return 0;
 }
 
