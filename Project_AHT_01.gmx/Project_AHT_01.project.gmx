@@ -46,6 +46,7 @@
         <sprite>sprites\spr_wizard_flash</sprite>
         <sprite>sprites\spr_wizard_flash2</sprite>
         <sprite>sprites\spr_skill_range</sprite>
+        <sprite>sprites\spr_skill_range_invisible</sprite>
       </sprites>
     </sprites>
     <sprites name="Static">
@@ -141,6 +142,7 @@
       <object>objects\obj_skill_range</object>
       <object>objects\obj_skill_range2</object>
       <object>objects\obj_skill_range3</object>
+      <object>objects\obj_skill_range_invisible</object>
     </objects>
     <objects name="View">
       <object>objects\obj_view_quake</object>

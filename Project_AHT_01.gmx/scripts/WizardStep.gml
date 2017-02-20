@@ -103,7 +103,10 @@ if(m_Time == 6.5 && m_isAttacking)
         
     var skill_range2 = instance_create(skill.x, skill.y, obj_skill_range);
     
+    instance_create(skill.x, skill.y, obj_skill_range_invisible);
+    
     obj = instance_create(1, 1, obj_view_quake);
+  
     
 }
 
@@ -123,6 +126,8 @@ if(m_Time == 7 && m_isAttacking)
         var skill = instance_create(player.phy_position_x, player.phy_position_y, obj_effect_wizard_skill2);
         
     var skill_range2 = instance_create(skill.x, skill.y, obj_skill_range2);
+    
+    instance_create(skill.x, skill.y, obj_skill_range_invisible);
 }
 
 if(m_Time == 7.5 && m_isAttacking)
@@ -139,6 +144,8 @@ if(m_Time == 7.5 && m_isAttacking)
         var skill = instance_create(player.phy_position_x, player.phy_position_y, obj_effect_wizard_skill3);
         
     var skill_range2 = instance_create(skill.x, skill.y, obj_skill_range3);
+    
+    instance_create(skill.x, skill.y, obj_skill_range_invisible);
 }
 
 //防止巫师走出房间
