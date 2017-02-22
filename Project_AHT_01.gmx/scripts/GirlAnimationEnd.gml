@@ -5,6 +5,6 @@ if(m_isAttacking && sprite_index == spr_girl_attack_side
 }
 if(m_isDead){
     image_index = -1;
-    image_speed = 0;
+    image_speed = 0.25;
 }
 

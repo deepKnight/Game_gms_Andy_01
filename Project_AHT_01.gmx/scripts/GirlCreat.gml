@@ -1,4 +1,4 @@
-m_hp = 10;//生命值
+m_hp = 3;//生命值
 walkspeed = 6;//行走速度控制
 image_speed = 0.25;//sprite动画速度控制
 

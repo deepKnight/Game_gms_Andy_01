@@ -15,7 +15,12 @@
       <sprite>sprites\spr_girl_attack_front</sprite>
       <sprite>sprites\spr_girl_hitbox</sprite>
       <sprite>sprites\spr_girl_attack_back</sprite>
+      <sprite>sprites\spr_girl_die</sprite>
       <sprite>sprites\spr_girl_attack_bullet</sprite>
+    </sprites>
+    <sprites name="Devilfire">
+      <sprite>sprites\spr_devilfire_hitbox</sprite>
+      <sprite>sprites\spr_devilfire_all</sprite>
     </sprites>
     <sprites name="Guard">
       <sprite>sprites\spr_guard_stand</sprite>
@@ -82,6 +87,15 @@
       <script>scripts\GirlHitboxStep.gml</script>
       <script>scripts\GirlHitboxDamage.gml</script>
     </scripts>
+    <scripts name="Devilfire">
+      <script>scripts\DevilfireCreat.gml</script>
+      <script>scripts\DevilfireStep.gml</script>
+      <script>scripts\DevilfireAnimationEnd.gml</script>
+      <script>scripts\DevilfireDamage.gml</script>
+      <script>scripts\DevilfireHitboxCreat.gml</script>
+      <script>scripts\DevilfireHitboxStep.gml</script>
+      <script>scripts\DevilfireHitboxDamage.gml</script>
+    </scripts>
     <scripts name="Guard">
       <script>scripts\GuardCreat.gml</script>
       <script>scripts\GuardStep.gml</script>
@@ -121,6 +135,8 @@
     <object>objects\obj_guard_attack_invisible</object>
     <object>objects\obj_wizard</object>
     <object>objects\obj_wizard_hitbox</object>
+    <object>objects\obj_devilfire</object>
+    <object>objects\obj_devilfire_hitbox</object>
     <objects name="Static">
       <object>objects\obj_barrel</object>
       <object>objects\obj_statue</object>

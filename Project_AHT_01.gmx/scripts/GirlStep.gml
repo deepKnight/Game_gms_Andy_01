@@ -3,31 +3,37 @@ if(m_isDead)
     
 if(m_hp == 0){
     m_isDead = true;
-    sprite_index = spr_guard_die;//这里改成小女孩死亡动画
+    sprite_index = spr_girl_die;
     return 0;
 }
 
 if(m_isAttacking == false)
 {
 if(keyboard_check(ord('J'))){
+  
   m_isAttacking = true;
   switch(m_playerDirection)
   {
   case PlayerDirection.UP:
     sprite_index = spr_girl_attack_back;
+    image_speed = 0.4;
     break;
   case PlayerDirection.DOWN:
     sprite_index = spr_girl_attack_front;
+    image_speed = 0.4;
     break;
   case PlayerDirection.LEFT:
     sprite_index = spr_girl_attack_side;
+    image_speed = 0.4;
     break;
   case PlayerDirection.RIGHT:
     sprite_index = spr_girl_attack_side;
+    image_speed = 0.4;
     break;
   }
   image_index = 0;
   m_fired = false;
+  image_speed = 0.25;
 }
 
 else if(keyboard_check(ord('A')))
