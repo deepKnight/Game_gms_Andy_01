@@ -3,7 +3,13 @@ distance = sqrt(power(player.phy_position_x - phy_position_x, 2) + power(player.
 
 //检测是否死亡
 if(m_isDead)
+    {
+    if(!audio_is_playing(s_wizard_dead))
+        {
+        audio_play_sound(s_wizard_dead, 2, false);
+        }
     return 0;
+    }
 
 //计算生命值
 if(m_hp == 0){
@@ -29,7 +35,7 @@ if(m_isAttacking == false && m_isFlashing == false)
     //如果巫师跟Player的距离在1000px内，巫师就会发动攻击
     if(m_Time == 6)
     {
-        if(distance <= 1000)
+        if(distance <= 500)
         {
             m_isWalking = false;
             Wizard_Skill_Attack();
@@ -41,7 +47,7 @@ if(m_isAttacking == false && m_isFlashing == false)
         || phy_position_x == 0 || phy_position_y == 0
         || phy_position_x == room_width || phy_position_y == room_height)
     {
-        if(power(player.phy_position_x, 2) + power(player.phy_position_y, 2) <= 1000000)
+        if(distance <= 500)
         {
             m_isWalking = false;
             Wizard_Skill_Flash();
@@ -79,6 +85,10 @@ if(m_isAttacking == false && m_isFlashing == false)
             
             if(m_isWalking = true)
                 {
+                if(!audio_is_playing(s_wizard_walk))
+                    {
+                    audio_play_sound(s_wizard_walk, 2, false);
+                    }
                 if(player.phy_position_x <= phy_position_x)
                     sprite_index = spr_wizard_walk_left;
                 else
@@ -103,10 +113,7 @@ if(m_Time == 6.5 && m_isAttacking)
         
     var skill_range2 = instance_create(skill.x, skill.y, obj_skill_range);
     
-    instance_create(skill.x, skill.y, obj_skill_range_invisible);
-    
     obj = instance_create(1, 1, obj_view_quake);
-  
     
 }
 
@@ -126,8 +133,7 @@ if(m_Time == 7 && m_isAttacking)
         var skill = instance_create(player.phy_position_x, player.phy_position_y, obj_effect_wizard_skill2);
         
     var skill_range2 = instance_create(skill.x, skill.y, obj_skill_range2);
-    
-    instance_create(skill.x, skill.y, obj_skill_range_invisible);
+
 }
 
 if(m_Time == 7.5 && m_isAttacking)
@@ -145,7 +151,6 @@ if(m_Time == 7.5 && m_isAttacking)
         
     var skill_range2 = instance_create(skill.x, skill.y, obj_skill_range3);
     
-    instance_create(skill.x, skill.y, obj_skill_range_invisible);
 }
 
 //防止巫师走出房间

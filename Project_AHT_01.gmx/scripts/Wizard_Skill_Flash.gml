@@ -4,6 +4,8 @@ if(m_isFlashing == false)
 {
     m_isFlashing = true
     
+    audio_play_sound(s_wizard_flash, 2, false);
+    
     var flash = instance_create(phy_position_x, phy_position_y - 50, obj_effect_wizard_flash);
     
     //随机向上下左右距离Player 100像素外200像素内的区域闪现

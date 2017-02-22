@@ -2,8 +2,14 @@ var player = instance_find(obj_girl, 0);
 distance = sqrt(power(player.phy_position_x - phy_position_x, 2) + power(player.phy_position_y - phy_position_y, 2));
 
 if(m_isDead)
+{
+    if(!audio_is_playing(s_guard_dead))
+        {
+        	audio_play_sound(s_guard_dead, 2, false);
+        }
     return 0;
-    
+}
+       
 if(m_hp == 0){
     m_isDead = true;
     if(player.phy_position_x >= phy_position_x){
@@ -23,6 +29,9 @@ if(m_isAttacking == false)
     var mySpeed = walkspeed;
     if(distance < 150){
         m_isAttacking = true;
+        
+        audio_play_sound(s_guard_attack, 2, false);
+        
         if(deltaX > 0){
             sprite_index = spr_guard_attack_R_D;
         }

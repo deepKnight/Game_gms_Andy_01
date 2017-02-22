@@ -10,7 +10,9 @@ if(m_hp == 0){
 if(m_isAttacking == false)
 {
 if(keyboard_check(ord('J'))){
-  
+  audio_play_sound(s_girl_attack1, 2, false);
+  audio_play_sound(s_girl_attack2, 2, false);
+
   m_isAttacking = true;
   switch(m_playerDirection)
   {
@@ -42,6 +44,7 @@ else if(keyboard_check(ord('A')))
     sprite_index = spr_girl_walk_side;
     image_xscale = 1;
     m_playerDirection = PlayerDirection.LEFT;
+    GirlWalkSound();
 }
 else if(keyboard_check(ord('D')))
 {
@@ -49,12 +52,14 @@ else if(keyboard_check(ord('D')))
     sprite_index = spr_girl_walk_side;
     image_xscale = -1;
     m_playerDirection = PlayerDirection.RIGHT;
+    GirlWalkSound();
 }
 else if(keyboard_check(ord('W')))
 {
     phy_position_y = phy_position_y - walkspeed;
     sprite_index = spr_girl_walk_back;
     m_playerDirection = PlayerDirection.UP;
+    GirlWalkSound();
 }
 
 else if(keyboard_check(ord('S')))
@@ -62,6 +67,7 @@ else if(keyboard_check(ord('S')))
     phy_position_y = phy_position_y + walkspeed;
     sprite_index = spr_girl_walk_front;
     m_playerDirection = PlayerDirection.DOWN    ;
+    GirlWalkSound();
 }
 else
 {

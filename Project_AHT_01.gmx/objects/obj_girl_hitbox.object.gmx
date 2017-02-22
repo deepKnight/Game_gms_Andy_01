@@ -54,7 +54,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_devilfire_hitbox">
+    <event eventtype="4" ename="obj_skill_range_invisible">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,7 +77,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_skill_range_invisible">
+    <event eventtype="4" ename="obj_devilfire_hitbox">
       <action>
         <libid>1</libid>
         <id>603</id>

@@ -84,6 +84,9 @@
     <instance objName="obj_devilfire" x="1214" y="754" name="inst_B56A38B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_guard" x="767" y="564" name="inst_4F4B017C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wizard" x="228" y="687" name="inst_751EA9F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ui_base" x="10" y="13" name="inst_996333EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sound_base" x="11" y="36" name="inst_98E23457" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_view_dark" x="192" y="195" name="inst_71380324" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

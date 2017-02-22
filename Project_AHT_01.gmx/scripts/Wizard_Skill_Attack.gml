@@ -5,6 +5,8 @@ if(m_isAttacking == false)
 {
     m_isAttacking = true;
     
+    audio_play_sound(s_wizard_attack, 2, false);
+    
     if(player.phy_position_x < phy_position_x)
         wizard.sprite_index = spr_wizard_attack_left;
     else

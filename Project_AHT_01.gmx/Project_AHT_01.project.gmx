@@ -4,7 +4,31 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="background">
+      <sound>sound\s_heartbit</sound>
+      <sound>sound\s_heartbitfast</sound>
+    </sounds>
+    <sounds name="wizard">
+      <sound>sound\s_wizard_attack</sound>
+      <sound>sound\s_wizard_damage</sound>
+      <sound>sound\s_wizard_dead</sound>
+      <sound>sound\s_wizard_walk</sound>
+      <sound>sound\s_wizard_flash</sound>
+      <sound>sound\s_wizard_skill</sound>
+    </sounds>
+    <sounds name="girl">
+      <sound>sound\s_girl_walk</sound>
+      <sound>sound\s_girl_damage</sound>
+      <sound>sound\s_girl_attack1</sound>
+      <sound>sound\s_girl_attack2</sound>
+    </sounds>
+    <sounds name="guard">
+      <sound>sound\s_guard_attack</sound>
+      <sound>sound\s_guard_dead</sound>
+      <sound>sound\s_guard_damage</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Girl">
       <sprite>sprites\spr_girl_walk_front</sprite>
@@ -67,6 +91,11 @@
     </sprites>
     <sprites name="View">
       <sprite>sprites\spr_view_quake</sprite>
+      <sprite>sprites\spr_view_dark</sprite>
+    </sprites>
+    <sprites name="UI">
+      <sprite>sprites\spr_health_white</sprite>
+      <sprite>sprites\spr_health_red</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -86,6 +115,7 @@
       <script>scripts\GirlHitboxCreat.gml</script>
       <script>scripts\GirlHitboxStep.gml</script>
       <script>scripts\GirlHitboxDamage.gml</script>
+      <script>scripts\GirlWalkSound.gml</script>
     </scripts>
     <scripts name="Devilfire">
       <script>scripts\DevilfireCreat.gml</script>
@@ -121,12 +151,24 @@
     <scripts name="View">
       <script>scripts\view_quake.gml</script>
     </scripts>
+    <scripts name="UI">
+      <scripts name="health">
+        <script>scripts\health_settings.gml</script>
+        <script>scripts\health_increase.gml</script>
+        <script>scripts\health_decrease.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Sound">
+      <script>scripts\s_heartbit_step.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_scene_base</object>
     <object>objects\obj_scene_static</object>
     <object>objects\obj_scene_dynamic</object>
     <object>objects\obj_character</object>
+    <object>objects\obj_ui_base</object>
+    <object>objects\obj_sound_base</object>
     <object>objects\obj_girl</object>
     <object>objects\obj_girl_hitbox</object>
     <object>objects\obj_girl_attack_bullet</object>
@@ -162,6 +204,13 @@
     </objects>
     <objects name="View">
       <object>objects\obj_view_quake</object>
+      <object>objects\obj_view_dark</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\obj_health</object>
+    </objects>
+    <objects name="Sound">
+      <object>objects\obj_heartbit</object>
     </objects>
   </objects>
   <rooms name="rooms">
